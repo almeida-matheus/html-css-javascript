@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="h1click()">clique</h1>
+    <h1 onclick="this.style.color='red'">clique</h1>
+
+    <!--onchange: quando tirar foco executa-->
+    <input type="text" oninput="changeh1(this)">
+
+    <div onclick="hideh1()"> click </div>
+
+    <script>
+
+        function h1click() {
+            console.log("executado")
+        }
+
+        function changeh1(input) { //input poderia ser qualquer nome
+            let h1 = document.getElementsByTagName("h1")[0]
+            console.log(h1)
+            h1.innerText = input.value
+        }
+
+        function hideh1() {
+            let h1 = document.getElementsByTagName("h1")[1];
+            h1.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>

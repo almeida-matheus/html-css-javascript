@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calcMedia(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+        var aluno = {
+            nome: "igor",
+            notas: [9, 8],
+            media: calcMedia
+        }
+        console.log(aluno.nome);
+        console.log(aluno.media(aluno.notas[0], aluno.notas[1]));
+        
+        // variavel dentro do objeto = propriedade
+        // funcao dentro do objeto = metodo
+        function calcMedia() {
+            return (this.notas[0] + this.notas[1]) / 2;
+        }
+        var aluno = {
+            nome: "igor",
+            notas: [9, 8],
+            media: calcMedia
+        }
+        console.log(aluno.nome);
+        console.log(aluno.media());
+
+        
+    </script>
+</body>
+</html>

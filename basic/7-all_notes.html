@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nomes = ["Igor", "Jose", "Maria", "Leo", "Antonio"];
+        var notasA = [7.0, 6.5, 9.5, 2, 6];
+        var notasB = [8.0, 7.0, 8.5, 10, 9];
+
+        function media(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+
+        function passou(media) {
+            if (media > 7) {
+                return "aprovado"
+            }
+            else {
+                return "reprovado"
+            }
+
+        }
+        for (var index in nomes) {
+            var nota1 = notasA[index];
+            var nota2 = notasB[index];
+            var m = media(nota1, nota2);
+
+            console.log(nomes[index] +
+                " - " +
+                nota1 +
+                " - " +
+                nota2 +
+                " - " +
+                m +
+                " - " +
+                passou(m));
+        }
+    </script>
+</body>
+
+</html>

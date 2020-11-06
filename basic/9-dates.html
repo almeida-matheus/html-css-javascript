@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //month: 0 - 11
+        //se passar somente um campo ele conta como mili segundos (1000 * 60 * 60 * 24)
+        // var d = new Date(year, month, day, hours, minutes, seconds, miliseconds);
+        var d = new Date(2020, 11, 05);
+
+        var d = new Date("05-25-2020");
+        var d = new Date("11-05-2020");
+
+        dias = ["dom","seg","ter","qua","qui","sex","sab"]
+
+        console.log(d);
+        
+        //mostrar o atual dia
+        console.log(d.getDate());
+        console.log(dias[d.getDate()]);
+
+        //mostra o atual dia da semana de 0-6
+        console.log(d.getDay());
+
+
+        //modificar o dia seFullyear, setHours
+        console.log(d.setDate(20));
+        console.log(d);
+        //Alert "Hello" every 3 seconds (3000 milliseconds):
+        //setInterval(function(){ alert("Hello"); }, 3000);
+
+    </script>
+</body>
+</html>

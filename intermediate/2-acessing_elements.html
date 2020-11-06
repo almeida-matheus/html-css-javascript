@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>title</h1>
+    <p class="paragrafo" id="p1">paragrafo1</p>
+    <p class="paragrafo" >paragrafo2</p>
+    <p>paragrafo3</p>
+
+    <script>
+        //como acessar os elementos
+
+        //ID
+        let p1 = document.getElementById("p1");
+        console.log(p1);
+
+        //CLASS
+        let paragrafos = document.getElementsByClassName("paragrafo");
+        console.log(paragrafos);
+        for (let p of paragrafos) {
+            console.log(p)
+        }
+
+        //TAG
+        let p = document.getElementsByTagName("p")
+        console.log(p[2])
+    </script>
+</body>
+</html>

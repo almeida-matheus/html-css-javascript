@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>title</h1>
+    <p att="matheus" class="paragrafo" id="p1">paragrafo1
+        <span style="display: none;">so o text.content capta aqui</span>
+    </p>
+    <p class="paragrafo" >paragrafo2</p>
+    <p>paragrafo3</p>
+
+    <script>
+        //como acessar os elementos
+
+        //ID
+        let p1 = document.getElementById("p1");
+        
+        p1.innerHTML = "<h3> novo conteudo1 </h3>" //esse executa o html
+        p1.innerText = "novo conteudo2" //mostra so oq ta na tela
+        p1.textContent = "novo conteudo3" //mostra td ate o span d-none
+
+        //atributo existente
+        p1.style = "color:blue"
+        
+        //atributo criado
+        let att = p1.getAttribute("att") //mostrar
+        att = p1.setAttribute("att","outro nome") //modificar
+        console.log(att)
+
+    </script>
+</body>
+</html>

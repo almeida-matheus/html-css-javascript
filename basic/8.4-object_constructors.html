@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //construtor de um objeto
+        function aluno(nome, n1, n2) {
+
+            this.nome = nome;
+            this.nota1 = n1;
+            this.nota2 = n2;
+
+            this.media = function () {
+                return (this.nota1 + this.nota2) / 2;
+            }
+        }   
+        //joao eh uma instancea de aluno
+        var a = new aluno("igor", 8, 7);
+        // var a = new aluno("joao", 6, 7);
+
+        console.log(a.media());
+        
+    </script>
+</body>
+
+</html>

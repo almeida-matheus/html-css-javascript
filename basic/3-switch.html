@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var av1 = 8;
+        var av2 = 10;
+
+        var media = (av1 + av2) / 2;
+
+        var conceito = " "
+
+
+        if (media >= 8) {
+            conceito = "otimo";
+        }
+
+        else if (media >= 6) {
+            conceito = "bom";
+        }
+
+        else {
+            conceito = "regular";
+        }
+
+        console.log(media)
+
+
+        switch (conceito) {
+
+            case "otimo":
+                console.log("Otimo! media: " + media);
+                break;
+            case "bom":
+                console.log("Bom! media: " + media);
+                break;
+            case "regular":
+                console.log("Regular! média: " + media + " pontos");
+                break;
+            default:
+                console.log("Houve algum erro");
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

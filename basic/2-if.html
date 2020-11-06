@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let adulto = 10 > 18
+        if (!adulto) console.log('true') //vai printar true pq ! negou
+        
+        var idade = 19;
+
+        if (idade >= 18 && idade <= 70) {
+            console.log("pode beber");
+        }
+        else {
+            console.log("nao pode beber");
+        }
+
+        idade >= 18 ? console.log("pode") : console.log("nao pode")
+        var pode = idade >= 18 ? true : false;
+        console.log(pode)
+        
+        var prova1 = 75;
+        var prova2 = 50;
+        var prova3 = 53;
+
+        var notas = (prova1 + prova2 + prova3) / 3;
+
+        var aprovacao = notas >= 60;
+        var recuperacao = notas <= 59.9 && notas >= 40;
+        var reprovacao = notas <= 39.9; // passei para boolean
+
+        if (aprovacao > recuperacao) {
+            console.log("aprovado com: ", notas);
+            // console.log("aprovado com" + notas + "pontos")
+        } 
+        else if (recuperacao > reprovacao) { // agora não preciso do ||
+            console.log("recuperacao com: ", notas);
+        } 
+        else {
+            console.log("reprovado com: ", notas);
+        }
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("hello world")
+        console.log("hello world")
+        var a = "1"; //variavel global, pode ser acessada em qualquer lugar
+        const c = 1; //variavel local, let para declarar um valor constante
+        let b = c++; //variavel local só pode ser acessada na funçao
+        // b=1 e c=2
+        console.log(c + c);
+        console.log(a + a); //concatena, string so funciona o +
+
+        b += 5; //b = b + 5
+        c % b //resto de 5/2 = 1
+        a == b //compara valor = true false
+        a != b //oposto
+        a === b //compara valor e tipo = true false (recomendavel para comparar um array vazio por exemplo)
+        a !== b //oposto
+
+        var q = false;
+        var w = true;
+        var e = q && w; //q and w = true? false
+        e = q || w; //q or w = true? true
+
+    </script>
+</body>
+
+</html>

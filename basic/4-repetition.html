@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //numero random com 2 casas decimais
+        var random = (Math.random() * 100).toFixed(2) //gera numero entre 0  e 1
+        console.log(random)
+        
+        var numero = 5;
+
+        for (let i = 0; i < numero; i++) {
+            console.log("executando pela " + (i+1) + " vez");
+        }
+        //while: quando nao sabe quando a condicao vai ser satisfeita
+        while (numero < 10) {
+            console.log("numero:" + numero);
+            numero++;
+        }
+        console.log(numero);
+        console.log("acabou");
+
+    </script>
+</body>
+
+</html>
