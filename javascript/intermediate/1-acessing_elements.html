@@ -12,8 +12,13 @@
     <p>paragrafo3</p>
 
     <script>
-        //como acessar os elementos
+        // document e alert é uma propriedade de window
+        // alert("hello world")
 
+        //o html em string
+        document.body.innerHTML = "<h1>title added</h1>" + document.body.innerHTML
+
+        //como acessar os elementos
         //ID
         let p1 = document.getElementById("p1");
         console.log(p1);

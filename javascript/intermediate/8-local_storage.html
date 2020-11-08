@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //local storage so grava string, mas tem como burlar isso com json
+        //grava um dado na memoria do navegador
+        localStorage.setItem("aluno", "matheus") //chave + string
+        //usa o dado da memoria q foi gravado
+        localStorage.getItem("aluno") //ira mostrar matheus
+        //apaga o dado da memoria do navegador
+        localStorage.removeItem("aluno")
+        //apaga td da memoria
+        // localStorage.clear()
+
+        onload = function () {
+
+            let nome = localStorage.getItem("nome")
+            let h1 = document.getElementById("nome")
+            h1.innerHTML = nome
+
+            //obj
+            let a = localStorage.getItem("conc")
+            console.log(JSON.parse(a))
+        }
+
+        function atualizar(element) {
+
+            let valor = element.value;
+            console.log(valor)
+
+            let h1 = document.getElementById("nome")
+            h1.innerHTML = valor
+
+            localStorage.setItem("nome", valor)
+
+            //se digitar salvar esse obj
+            let conc = {candidato: "matheus", n: 8.5}
+            localStorage.setItem("conc", JSON.stringify(conc))
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1 id="nome"></h1>
+    <input type="text" oninput="atualizar(this)">
+
+    <scrip>
+
+
+    </scrip>
+</body>
+
+</html>

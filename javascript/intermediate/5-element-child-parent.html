@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        window.onload = function () {
+            let d1 = document.getElementById("d1")
+            
+            let child = d1.children[0] //child
+            document.body.children[0].children[0] //child
+            console.log(child)
+
+
+            let parent = child.parentElement //parent
+            console.log(parent)
+
+            //descobrir o pai
+            let h1 = document.getElementsByTagName("h1")
+            for (let h of h1) {
+                console.log(h)
+
+                h.addEventListener("click", qop)
+            }
+            //funcao descobrir qual eh o pai
+            //e: recebe o evento
+            function qop(e){
+                let t = e.target
+                console.log(t.parentElement)
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="d1">
+        <h1>titulo 1</h1>
+        <p>texto</p>
+    </div>
+
+    <div id="d2">
+        <h1>titulo 2</h1>
+        <p>texto</p>
+    </div>
+
+</body>
+
+</html>

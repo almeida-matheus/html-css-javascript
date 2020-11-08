@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartao de visitas</title>
+    <!--relative permite usar top left bottom-->
+    <style>
+        body{
+            font-size: 1.2rem;
+        }
+        .card{
+            float: left;
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+            text-align: center;
+
+            position: relative;
+        }
+        /*ALINHADO NO CENTRO*/
+        .c1{
+            height: 100%; /*100% do elemento pai*/
+            line-height: 200px;/*ficar centralizado*/
+        }
+        .c2{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .card2 {
+            clear: left; /*nada na esquerda do card2, pra jogar ele pra baixo*/
+            float: left;
+            border: 2px solid green;
+            padding: 100px 153px 100px 153px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="c1">
+            igor oliveira
+        </div>
+    </div>
+    <div class="card">
+        <div class="c2">
+            igor oliveira
+        </div>
+    </div>
+    <div class="card2">
+        <div>
+            igor oliveira
+        </div>
+    </div>
+</body>
+
+</html>

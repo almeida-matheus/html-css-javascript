@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON
+        //stringify: objeto json > string
+        //parse: string > objeto json
+
+        let obj1 = {
+            nome: "matheus",
+            nota: 8.5
+        }
+
+        let string1 = JSON.stringify(obj1)
+
+        let string2 = '{"nome":"matheus", "nota":8.5}'
+
+        let obj2 = JSON.parse(string2)
+
+        console.log(obj1)
+        console.log(string1)
+        console.log(string2)
+        console.log(obj2)
+
+        //na string nao da pra fazer isso
+        console.log(obj2.nota)
+    </script>
+</body>
+</html>

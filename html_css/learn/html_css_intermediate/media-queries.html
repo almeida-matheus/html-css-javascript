@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <!--relative permite usar top left bottom-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            background-color: brown;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+
+        li {
+            /* display: inline-block; */
+            float: left;
+            color: white;
+            margin-left: 15px;
+            margin: 0;
+        }
+
+        .logo {
+            float: left;
+            color: white;
+        }
+
+        @media screen and (max-width: 500px) {
+            .logo{
+                float: none;
+                text-align: center;
+            }
+            .menu{
+                float: none;
+                text-align: center;
+                margin-top: 20px;
+
+            }
+            li{
+                float: none;
+                padding: 10px;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            logo
+        </div>
+        <div class="menu">
+            <li>home</li>
+            <li>cursos</li>
+            <li>contato</li>
+        </div>
+    </div>
+</body>
+
+</html>

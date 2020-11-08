@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="console.log('pagina carregada')" >
+    
     <h1 onclick="h1click()">clique</h1>
     <h1 onclick="this.style.color='red'">clique</h1>
 
@@ -13,6 +14,10 @@
     <input type="text" oninput="changeh1(this)">
 
     <div onclick="hideh1()"> click </div>
+
+    <hr>
+
+    <h1 onmouseover="onOver(this)" onmouseout="onOut(this)" style="background-color: darkgray;">cursor</h1>
 
     <script>
 
@@ -29,6 +34,14 @@
         function hideh1() {
             let h1 = document.getElementsByTagName("h1")[1];
             h1.style.display = "none";
+        }
+
+        function onOver(elemento) {
+            elemento.style.backgroundColor = "red"
+        }
+
+        function onOut(elemento) {
+            elemento.style.backgroundColor = "darkgray"
         }
 
     </script>

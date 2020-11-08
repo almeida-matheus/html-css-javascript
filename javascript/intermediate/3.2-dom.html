@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function loaded() {
+            let t = document.getElementById("titulo")
+            
+            // t.onclick = mudarText;
+            // t.addEventListener("click", mudarText) //quando tiver o click vai modificar o texto
+
+
+            t.addEventListener("mouseover", mudarText)
+            t.addEventListener("mouseout", mouseOut)
+        }
+
+        function mudarText() {
+            this.innerHTML = "novo texo";
+        }
+
+        function mouseOut() {
+            this.innerHTML = "ford car fora do elemento tlg?"
+        }
+    </script>
+
+</head>
+<body onload="loaded()" >
+    
+    <h1 id="titulo">teste</h1>
+
+</body>
+</html>

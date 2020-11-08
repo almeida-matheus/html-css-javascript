@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial;
+}
+
+p{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: Helvetica, Arial;
+}
+
+body{
+    background-color: #000000;
+}
+
+header{
+    background-color: green;
+    height: 80px; /*se nao adicionar altura vai ficar do tamanho da fonte*/
+    padding: 20px; /*padding = margem interna, para nao encostar no topo*/
+}
+
+#div_esquerda {
+    background-color: greenyellow;
+    min-height: 200px; /*min significa q ela pode crescer*/
+    width: 60%;
+    float: left; /*deixar a div no lado esquerdo*/
+}
+
+
+#div_direita {
+    background-color:yellow;
+    min-height: 200px;
+    width: 40%;
+    float: right; /*deixar a div no lado direito*/
+}
+
+footer{
+    clear: both;/*sempre que usa float na de cima tem q usar clear*/
+    background-color: blue;
+    height: 50px;
+    text-align: center;
+    padding: 10px 10px 10px 10px; /*1-cima, 2-direita, 3-baixo, 4-esquerda*/
+}
+
+.container{
+    width: 960px;
+    margin:0 auto; /*auto = largura, margem do lado esquerdo e direito*/
+}

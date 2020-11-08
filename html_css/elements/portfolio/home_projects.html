@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Meu site</title>
+</head>
+<!--css para os itens ficarem horizontal-->
+<style>
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    background-color: black;
+    padding: 30px;
+    color: white;
+}
+#TopMenu {
+    display: flex;
+    background-color:#232d5c;
+    margin:0;
+}
+#TopMenu li {
+    color: honeydew;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+#TopMenu li:first-child {
+    margin-right: auto;
+}
+.section1 {
+    display: flex;
+    height: 100vh;
+    background-color:#1948bf;
+}
+.centralize {
+    margin: auto;
+    text-align: center;
+}
+.ImagemProjeto{ 
+    width: 15vw;
+    height: 15vw;
+    padding-left:15px;
+}
+.ImagemLogo {
+    width: 3vw;
+    height: 5vh;
+    padding-left:5px;
+}
+.section2 {
+    display: flex;
+    height: 33vh;
+    background-color: whitesmoke;
+}
+.section3 {
+    display: flex;
+    height: 33vh;
+    background-color:#adbac9;
+}
+
+.BotaoProjeto{
+    background-color:#232d5c;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+</style>
+<body>
+    <nav> <!--menu-->
+        <ul id="TopMenu"> <!--itens do menu-->
+            <!--<li><img class="ImagemLogo" src="" alt=""></li>-->
+            <li>Hello Friend</li>
+            <li>Home</li>
+            <li>Projetos</li>
+            <li>Contatos</li>
+        </ul>
+    </nav>
+    <div class="section1">
+        <div class="centralize">
+            <h1 style="color: white;">Matheus Almeida</h1>
+            <a href="#projetos"><button class="BotaoProjeto">Meus Projetos</button></a><!--link tag: a-->
+        </div>
+    </div>
+    <div id="projetos" class="section2 centralize"><!--secao do projeto-->
+        <table class="centralize"><!--tabelas para ter alinhamento simples-->
+            <tr><!--1 linha-->
+                <td style="width: 40%;"><img class="ImagemProjeto" src="https://mcdn.wallpapersafari.com/medium/10/74/8Y5Xeb.png" alt=""></td><!--2 colunas-->
+                <td style="width: 60%;text-align: left"> <!--2 colunas-->
+                    <ul style="color: teal;">
+                    Projeto 1
+                    <hr>
+                    <li>Descrição</li>
+                    <li>Tecnologia 1</li>
+                    <li>Tecnologia 2</li>
+                    <li>Tecnologia 3</li>
+                    <li>Tecnologia 4</li>
+                </ul></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="projetos" class="section3 centralize"><!--secao do projeto-->
+        <table class="centralize"><!--tabelas para ter alinhamento simples-->
+            <tr><!--1 linha-->
+                <td style="width: 60%;text-align: left"> <!--2 colunas-->
+                    <ul style="color: teal;">
+                    Projeto 2
+                    <hr>
+                    <li>Descrição</li>
+                    <li>Tecnologia 1</li>
+                    <li>Tecnologia 2</li>
+                    <li>Tecnologia 3</li>
+                    <li>Tecnologia 4</li>
+                </ul></td>
+                <td style="width: 40%;"><img class="ImagemProjeto" src="https://mcdn.wallpapersafari.com/medium/67/21/uW2cJy.jpg" alt=""></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="projetos" class="section2 centralize"><!--secao do projeto-->
+        <table class="centralize"><!--tabelas para ter alinhamento simples-->
+            <tr><!--1 linha-->
+                <td style="width: 40%;"><img class="ImagemProjeto" src="https://mcdn.wallpapersafari.com/medium/34/26/c1edkt.jpg" alt=""></td><!--2 colunas-->
+                <td style="width: 60%;text-align: left"> <!--2 colunas-->
+                    <ul style="color: teal;">
+                    Projeto 3
+                    <hr>
+                    <li>Descrição</li>
+                    <li>Tecnologia 1</li>
+                    <li>Tecnologia 2</li>
+                    <li>Tecnologia 3</li>
+                    <li>Tecnologia 4</li>
+                </ul></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer> <!--parte de baixo do site-->
+        <h5 class="centralize">Criado por Matheus</h5>
+    </footer>
+
+</body>
+</html>

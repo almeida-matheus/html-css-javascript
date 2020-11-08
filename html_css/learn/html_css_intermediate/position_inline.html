@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartao de visitas</title>
+    <!--relative permite usar top left bottom-->
+    <style>
+        body{
+            font-size: 1.2rem;
+            height: 120vh;
+        }
+        .static {
+            position: static;
+            top: 15px;
+
+        }
+        .relative{
+            position: relative;
+            top: 15px;
+        }
+        /*utilizado para fazer popups*/
+        .fixed{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+        /*referencia ao pai do elemento, quase igual relative*/
+        .absolute{
+            position: absolute;
+        }
+        .stick{
+            position: sticky;
+            top: 0; /*quadrado nao vai poder ter uma distancia menor q 0, nao vai poder sair da tela*/
+        }
+
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        .retangulo{
+            width: 200px;
+            height: 500px;
+            display: inline-block;
+            overflow: auto;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+        .bg-green{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="quadrado static bg-blue">
+    </div>
+    <div class="quadrado relative bg-red">
+    </div>
+    <div class="quadrado fixed bg-red">
+    </div>
+    <div class="quadrado absolute bg-blue">
+    </div>
+
+    <hr>
+
+    <div class="bg-blue retangulo">
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-green stick"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+        <div class="quadrado bg-red"></div>
+    </div>
+
+</body>
+
+</html>

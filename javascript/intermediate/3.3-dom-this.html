@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function loaded() {
+            let t1 = document.getElementById("t1");
+            let t2 = document.getElementById("t2");
+
+            t1.onclick = changeUppercase;
+            t2.onclick = changeUppercase;
+
+            function changeUppercase() {
+                
+
+                this.innerHTML = this.innerHTML.toUpperCase();
+
+                //ou manualmente
+                let t1 = document.getElementById("t1");
+                t1.innerHTML = t1.innerHTML.toUpperCase();
+            }
+
+        }
+    </script>
+
+</head>
+<body onload="loaded()" >
+    
+    <h1 id="t1">titulo1</h1>
+    <h1 id="t2">titulo2</h1>
+
+</body>
+</html>

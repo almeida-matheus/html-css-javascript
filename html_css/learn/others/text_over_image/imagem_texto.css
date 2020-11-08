@@ -1,0 +1,57 @@
+.container{
+    width: 800px;
+    margin: auto;
+    position: relative;
+    color: #fff;
+}
+
+.container img{
+    width: 100%;
+    filter: opacity(80%);
+}
+
+.centro{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.topodireita{
+    position: absolute;
+    top: 0;
+    right:0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.topoesquerda{
+    position: absolute;
+    top: 0;
+    left:0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.baixoesquerda{
+    position: absolute;
+    bottom:5px;
+    left:0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.baixodireita{
+    position: absolute;
+    bottom:5px;
+    right:0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}

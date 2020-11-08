@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial;
+}
+
+p{
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: Helvetica, Arial;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+body{
+    background-color: #000000;
+}
+
+header{
+    background-color: green;
+    height: 80px; /*se nao adicionar altura vai ficar do tamanho da fonte*/
+    padding: 20px; /*padding = margem interna, para nao encostar no topo*/
+}
+
+#div_esquerda {
+    background-color: greenyellow;
+    min-height: 200px; /*min significa q ela pode crescer*/
+    width: 60%;
+    float: left; /*deixar a div no lado esquerdo*/
+}
+
+h1{
+    color: orange;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+footer{
+    clear: both;/*sempre que usa float na de cima tem q usar clear*/
+    background-color: blue;
+    height: 50px;
+    text-align: center;
+    padding: 10px 10px 10px 10px; /*1-cima, 2-direita, 3-baixo, 4-esquerda*/
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+.container{
+    width: 960px;
+    margin:0 auto; /*auto = largura, margem do lado esquerdo e direito*/
+}
+
+#principal {
+    background-image: url(image_city.jpg);
+    background-size: 100%;
+    min-height: 400px;
+    padding: 80px 0px 0px 0px; /*aumentar margem interna de cima*/
+    clear: both; /*tem que acrescer clear nessa div pq tem float nas div de cima*/
+}
+
+.efeito {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0px 80px 0px;
+}
+
+#logo{
+    float: left;
+}
+
+  
+#menu{
+    float: right;
+    margin-top: 30px;
+}
+
+#menu a{ /*todos os links q estao na id menu*/
+    text-decoration: none; /*underline*/
+    color: black;
+    text-shadow: 1px 1px #111111;
+    padding: 52px 20px; /*1=altura, 2=largura*/
+}
+
+#menu a:hover{
+    background-color: black;
+    color: green;
+}
+
+.geral{
+    margin:0 auto;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 1 diferenca: f1= window | f2= elemento <h1>
+        // 2 diferenca: f1= undefined | f1= evento de click
+        function f1(e) {
+            console.log("teste f1")
+            console.log(this) //objeto window
+            console.log(e) // undefined pq nao passou nada ou elemento se passar o this
+        }
+
+        function f2(e) {
+            console.log("teste f2")
+            console.log(this) //elemento h1
+            console.log(e) //evento
+            console.log(e.target) //target do evento = h1
+
+        }
+
+        window.onload = function () {
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.addEventListener("click", f2)
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1 onclick="f1()">Title</h1>
+
+</body>
+
+</html>
