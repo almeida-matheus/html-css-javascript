@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="like" src="./img/thumbs-up.png">
+
+    <ul id="lista" data-num="10">
+
+    </ul>
+
+    <script>
+        let image = document.getElementById("like")
+        image.addEventListener("click", function() {
+            // image.src = "./img/thumbs-down.png"
+            image.setAttribute("src","./img/thumbs-down.png")
+            let lastImage = image.getAttribute("src")
+            console.log(lastImage)
+        })
+        let lista = document.getElementById("lista")
+        //parseInt: transforma string em numero
+        let num = parseInt(lista.getAttribute("data-num")) //
+
+        let conteudo = ""
+        for (let i=0; i<num; i++) {
+            conteudo += "<li>" + i + "</li>"
+        }
+        lista.innerHTML = conteudo
+    </script>
+
+</body>
+
+</html>

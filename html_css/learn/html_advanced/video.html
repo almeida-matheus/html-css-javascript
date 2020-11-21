@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 640px;
+            height: 360px;
+
+            position: relative;
+        }
+
+        .video {
+            /*video mantem proporcao*/
+            width: 100%;
+        }
+
+        .controle {
+            width: 100%;
+            height: 100%;
+
+            /*para o controle ficar em cima do video*/
+            position: absolute;
+            top: 0;
+
+            text-align: center;
+
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .btn {
+            width: 50px;
+            padding: 10px;
+
+            position: relative;
+            top: 100%;
+            transform: translateY(-100%);
+
+        }
+
+        /* .container:hover{
+            .controle {
+                opacity: 0;
+                transition: all 1s;
+            }
+        } */
+
+        .controle:hover {
+            opacity: 1;
+            transition: all 1s;
+        }
+
+        .btn:hover {
+            /* width: 52px; */
+            transition: all 1s;
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--poster: thumbnail-->
+    <!--preload: auto | metadata | none-->
+    <!--<video class="video" controls autoplay muted loop width="300" src="" poster="">-->
+    <div class="container">
+        <video id="video1" class="video" src="./video/file_example_MP4_480_1_5MG.mp4">
+
+        </video>
+        <div class="controle">
+            <img class="btn" onclick="retroceder()" src="./video/backward.png">
+            <img class="btn" onclick="avancar()" src="./video/forward.png">
+            <img class="btn" onclick="diminuir()" src="./video/lento.png">
+            <img class="btn" onclick="aumentar()" src="./video/rapido.png">
+            <img id="play-pause" class="btn" onclick="play()" src="./video/play.png">
+            <img class="btn" onclick="stop()" src="./video/stop.png">
+        </div>
+    </div>
+    <script>
+        let video = document.getElementById("video1")
+
+        // video.addEventListener("ended", )
+
+        let pp = document.getElementById("play-pause")
+        pp.addEventListener("click", function () {
+            let last = pp.getAttribute("src")
+            if (pp.getAttribute("src") != "./video/pause.png") {
+                let last = pp.getAttribute("src")
+                play()
+            }
+            else {
+                pp.setAttribute("src", "./video/pause.png")
+                let last = pp.getAttribute("src")
+                pause()
+            }
+            console.log(last)
+        })
+
+        function retroceder() {
+            video.currentTime -= 15
+        }
+
+        function avancar() {
+            video.currentTime += 15
+        }
+        function diminuir() {
+            //diminuir velocidade do video
+            video.playbackRate -= 0.1
+        }
+        function aumentar() {
+            video.playbackRate += 0.1
+
+        }
+        function play() {
+            video.play()
+        }
+        function pause() {
+            video.pause()
+        }
+
+        function stop() {
+            video.pause()
+            video.currentTime = 0
+        }
+
+        /*solucao para aparecer e desaparecer controles em js*/
+        // container.addEventListener('mouseout', () => {
+        //     controles.style.display = 'none'
+        // })
+
+        // container.addEventListener('mouseover', () => {
+        //     controles.style.display = ""
+        // })
+    </script>
+</body>
+
+</html>

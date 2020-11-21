@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage challenge</title>
+</head>
+
+<script>
+
+    onload = function () {
+
+        let load_list = localStorage.getItem("my_list");
+        let ul_list = document.getElementById("ul_list");
+
+        //digitar no html o objeto json q recebeu
+        ul_list.innerHTML = JSON.parse(load_list);
+
+    }
+
+    function add_task() {
+
+        //data = valor q digitou
+        let task_input = document.getElementById("task_input")
+        let data = task_input.value;
+
+        let ul_list = document.getElementById("ul_list")
+
+        //li = cria elemento li
+        li = document.createElement("li")
+
+        if (data == "") {
+            alert("error: input blank")
+        } 
+        else {
+            //cria o elemento e coloca o valor digitado (data)
+            li.innerHTML = data
+
+            //adiciona cada <li> em append no <ul>
+            ul_list.appendChild(li)
+
+            console.log(ul_list)
+            console.log(ul_list.innerHTML)
+
+
+            let array = Array.from(data)
+            console.log(array)
+        }
+
+        //transforma os itens da ul_list em string
+        //passa ul_list.innerHTML q tem <li>exemplo<li><teste>
+        let list = localStorage.setItem("my_list", JSON.stringify(ul_list.innerHTML))
+        task_input.value = ""
+    }
+
+    function erase_task(e) {
+        localStorage.clear("my_list")
+        console.log(e)
+    }
+
+</script>
+
+<body>
+
+    <label>Lista de Tarefas</label><br><br>
+    <input id="task_input" type="text"><br><br>
+    <button onClick="add_task()">Adicionar</button>
+    <button onClick="erase_task(this)">Apagar</button>
+    <br><br>
+
+    <ul id="ul_list">
+    </ul>
+
+</body>
+
+</html>

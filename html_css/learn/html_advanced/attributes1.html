@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista" data-num="10" data-id="53">
+
+    </ul>
+
+    <script>
+        let lista = document.getElementById("lista")
+
+        //let num = parseInt(lista.getAttribute("data-num"))
+
+        //importancia do data-num
+        lista.dataset.num = "4"
+        console.log(lista.dataset.num)
+
+        let id = parseInt(lista.dataset.id)
+        console.log(id)
+
+        let num = parseInt(lista.dataset.num)
+
+        let conteudo = ""
+        for (let i=0; i<num; i++) {
+            conteudo += "<li>" + i + "</li>"
+        }
+        lista.innerHTML = conteudo
+    </script>
+
+</body>
+
+</html>

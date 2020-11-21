@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function mudarCor() {
+            let h = document.getElementsByTagName("h1")[0]
+            h.style.color = "blue"
+        }
+
+        function mudarTexto() {
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML = "novo titulo"
+
+            //oq vc quer fazer, tempo de delay
+            setTimeout(mudarCor, 3000)
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <h1>titulo</h1>
+    <input onclick="mudarTexto()" type="submit" value="Mudar">
+
+</body>
+
+</html>
