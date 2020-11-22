@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tela{
+            position: relative;
+
+            background-color: bisque;
+            width: 500px;
+            height: 500px;
+
+            overflow: hidden;
+        }
+        .quadrado{
+            position: absolute;
+
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="tela">
+
+        <div id="jogador" class="quadrado"></div>
+
+    </div>
+
+    <script>
+        let jogador = document.getElementById("jogador")
+
+        let xInicial = 0
+        let yInicial = 0
+        
+        function moverJogador(x,y) {
+            let posX = x + "px"
+            let posY = y + "px"
+
+            jogador.style.top = posX
+            jogador.style.left = posY
+        }
+
+        //funcao executada a cada 0.5s
+        setInterval(function(){
+
+            moverJogador(xInicial++, yInicial++)
+
+        }, 50)
+        
+    </script>
+</body>
+</html>

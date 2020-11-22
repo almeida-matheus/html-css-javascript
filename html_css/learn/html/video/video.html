@@ -12,6 +12,18 @@
             height: 360px;
 
             position: relative;
+
+            margin: auto;
+            margin-top: 5rem;
+            box-shadow: 2px 2px 8px rgb(83, 83, 83);
+        }
+
+        h1 {
+            width: 640px;
+            margin: auto;
+            margin-top: 5rem;
+            font-weight: 800;
+            text-align: center;
         }
 
         .video {
@@ -68,32 +80,35 @@
     <!--preload: auto | metadata | none-->
     <!--<video class="video" controls autoplay muted loop width="300" src="" poster="">-->
     <div class="container">
-        <video id="video1" class="video" src="./video/file_example_MP4_480_1_5MG.mp4">
-
+        <h1>quem disse que elas precisam de nós?</h1>
+        <video id="video1" class="video" src="./assets/file_example_MP4_480_1_5MG.mp4">
         </video>
         <div class="controle">
-            <img class="btn" onclick="retroceder()" src="./video/backward.png">
-            <img class="btn" onclick="avancar()" src="./video/forward.png">
-            <img class="btn" onclick="diminuir()" src="./video/lento.png">
-            <img class="btn" onclick="aumentar()" src="./video/rapido.png">
-            <img id="play-pause" class="btn" onclick="play()" src="./video/play.png">
-            <img class="btn" onclick="stop()" src="./video/stop.png">
+            <img class="btn" onclick="retroceder()" src="./assets/backward.png">
+            <img class="btn" onclick="avancar()" src="./assets/forward.png">
+            <img class="btn" onclick="diminuir()" src="./assets/lento.png">
+            <img class="btn" onclick="aumentar()" src="./assets/rapido.png">
+            <img id="play-pause" class="btn" onclick="play()" src="./assets/play.png">
+            <img class="btn" onclick="stop()" src="./assets/stop.png">
         </div>
     </div>
     <script>
         let video = document.getElementById("video1")
-
-        // video.addEventListener("ended", )
-
         let pp = document.getElementById("play-pause")
+
+        video.addEventListener("ended", function(){
+            stop()
+        })
+
         pp.addEventListener("click", function () {
             let last = pp.getAttribute("src")
-            if (pp.getAttribute("src") != "./video/pause.png") {
+            if (pp.getAttribute("src") != "./assets/pause.png") {
+                pp.setAttribute("src", "./assets/pause.png")
                 let last = pp.getAttribute("src")
                 play()
             }
             else {
-                pp.setAttribute("src", "./video/pause.png")
+                pp.setAttribute("src", "./assets/play.png")
                 let last = pp.getAttribute("src")
                 pause()
             }
@@ -125,6 +140,7 @@
         function stop() {
             video.pause()
             video.currentTime = 0
+            pp.setAttribute("src", "./assets/play.png")
         }
 
         /*solucao para aparecer e desaparecer controles em js*/
