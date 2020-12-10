@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>CSS3 - Neumorphic Social Icons</title> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: #dde1e7;
+            width: 100%;
+        }
+
+        .icons {
+            display: flex;
+            margin: 40px 0;
+        }
+
+        li {
+            position: relative;
+            list-style: none;
+            height: 70px;
+            width: 70px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background: #dde1e7;
+            cursor: pointer;
+            box-shadow: -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94, 104, 121, 0.288);
+        }
+
+        li a {
+            line-height: 70px;
+            font-size: 27px;
+            color: #b6bbc5;
+        }
+
+        .first li.shadow-1 {
+            box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+        }
+
+        .first li.shadow-1 a {
+            font-size: 25px;
+        }
+
+        .second li.shadow-2 a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 55px;
+            width: 55px;
+            line-height: 55px;
+            border-radius: 50%;
+            background: #dde1e7;
+            font-size: 24px;
+            box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+        }
+
+        li:nth-child(1).fill-color a {
+            color: #4267B2;
+        }
+
+        li:nth-child(2).fill-color a {
+            color: #1DA1F2;
+        }
+
+        li:nth-child(3).fill-color a {
+            color: #E1306C;
+        }
+
+        li:nth-child(4).fill-color a {
+            color: #2867B2;
+        }
+
+        li:nth-child(5).fill-color a {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="icons first">
+            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+            <li><a href="#"><span class="fab fa-github"></span></a></li>
+        </div>
+        <div class="icons second">
+            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+            <li><a href="#"><span class="fab fa-github"></span></a></li>
+        </div>
+    </div>
+    <script>
+        $('.first li').click(function () {
+            $(this).toggleClass("shadow-1").siblings();
+            $(this).toggleClass("fill-color").siblings();
+        });
+        $('.second li').click(function () {
+            $(this).toggleClass("shadow-2").siblings();
+            $(this).toggleClass("fill-color").siblings();
+        });
+    </script>
+
+</body>
+
+</html>

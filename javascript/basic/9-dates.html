@@ -13,18 +13,19 @@
         var d = new Date(2020, 11, 05);
 
         var d = new Date("05-25-2020");
-        var d = new Date("11-05-2020");
+        var now = new Date();
 
         dias = ["dom","seg","ter","qua","qui","sex","sab"]
 
         console.log(d);
         
-        //mostrar o atual dia
-        console.log(d.getDate());
-        console.log(dias[d.getDate()]);
+        //mostrar o atual dia da semana 1-7
+        console.log(now.getDate());
 
-        //mostra o atual dia da semana de 0-6
+        //mostra o atual dia de 0-6
         console.log(d.getDay());
+        console.log(dias[d.getDay()]);
+
 
 
         //modificar o dia seFullyear, setHours
