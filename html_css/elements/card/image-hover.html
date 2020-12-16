@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<!--<html lang="pt-br">-->
+
+<head>
+    <!-- reconhecer todos caracteres -->
+    <meta charset="utf-8">
+    <!--comando para funcionar responsividade no celular-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS customizado-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- icones font awesome-->
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- bootstrap javascript-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!--javascript customizado-->
+    <script src="js/main.js"></script>
+    <!--titulo-->
+    <title>Matheus</title>
+    <style>
+        .container-img {
+            position: relative;
+            height: 500px;
+            width: 380px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .container-img:hover {
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container-img .img-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-img .img-content img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .container-img:hover .img-content img {
+            transform: scale(1.1);
+        }
+
+        .container-img .text-content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .text-content .wrapper {
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            background: #fff;
+            padding: 10px 25px;
+            box-shadow: -1px -1px 6px rgba(0, 0, 0, 0.1);
+            transition: bottom 0.3s ease;
+        }
+
+        .container-img:hover .text-content .wrapper {
+            bottom: 0px;
+        }
+
+        .wrapper .title {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .wrapper p {
+            font-size: 17px;
+            color: grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="container-img">
+                <div class="img-content">
+                    <img class="img-fluid" src="https://html.com/wp-content/uploads/flamingo.webp" alt="">
+                </div>
+                <div class="text-content">
+                    <div class="wrapper">
+                        <div class="title">
+                            Adidas Originals</div>
+                        <p>
+                            Men's running tshirt</p>
+                        <span class="price">$29.99</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-img">
+                <div class="img-content">
+                    <img class="img-fluid" src="https://html.com/wp-content/uploads/flamingo.webp" alt="">
+                </div>
+                <div class="text-content">
+                    <div class="wrapper">
+                        <div class="title">
+                            Adidas Originals</div>
+                        <p>
+                            Men's running tshirt</p>
+                        <span class="price">$29.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="card" style="width: 18rem;">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" class="card-img-top" alt="...">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
