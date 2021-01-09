@@ -1,0 +1,87 @@
+/** TIPS: 
+1. The carousel shouldn't be in any other div, like for example div with class container. 
+2. You can align image position in classes bg1, bg2, bg3 using css background-position.
+*/
+
+/* Carousel 100% Fullscreen */
+
+html, body {
+    height: 97%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel, .carousel-item, .active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel-caption {
+    z-index: 10;
+}
+
+.carousel .carousel-item {
+    background-color: #777;
+}
+
+.carousel .carousel-inner .bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel .carousel-inner .bg1 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/spiderweb.jpg');
+    background-position: center top;
+}
+
+.carousel .carousel-inner .bg2 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/hearthand.jpg');
+    background-position: center center;
+}
+
+.carousel .carousel-inner .bg3 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/woman-camera.jpg');
+    background-position: center bottom;
+}
+.carousel-caption {
+    margin-bottom: 100px;
+}
+.carousel-caption h1{
+    background-color: #63c6ae;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 25px 20px;
+    margin-top: 240px;
+}
+.carousel-caption p{
+    background-color: #242a2c;
+    margin: 5px 30px 35px;
+    color: white;
+    padding: 15px;
+    font-size: .9rem;
+}
+
+.carousel-caption .btn{
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(0,0,0,.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px !important;
+    height: 40px !important;
+}
