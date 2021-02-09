@@ -17,29 +17,38 @@
         //apaga td da memoria
         // localStorage.clear()
 
+        //td vez q carregar vai usar essa funcao q colocar o nome q foi digitado anteirormente
         onload = function () {
 
-            let nome = localStorage.getItem("nome")
             let h1 = document.getElementById("nome")
-            h1.innerHTML = nome
 
-            //obj
+            //PEGAR A VARIAVEL E MOSTRAR
+            let digito_gravado = localStorage.getItem("digito_gravado")
+            h1.innerHTML = digito_gravado
+
+            //PEGAR A VARIAVEL E MOSTRAR COMO OBJETO
             let a = localStorage.getItem("conc")
+            //json.parse = transforma em objeto javascript (reconhece string e numero)
             console.log(JSON.parse(a))
         }
 
         function atualizar(element) {
 
-            let valor = element.value;
-            console.log(valor)
+            //ARMAZENAR VARIAVEL
+            let digitado = element.value;
+            console.log(digitado)
 
             let h1 = document.getElementById("nome")
-            h1.innerHTML = valor
+            h1.innerHTML = digitado
 
-            localStorage.setItem("nome", valor)
+            //dgitiado recebe o valor q foi digitado
+            localStorage.setItem("digito_gravado", digitado)
 
+            //ARMAZENAR OBJETO
             //se digitar salvar esse obj
             let conc = {candidato: "matheus", n: 8.5}
+            //json.stringify= transformar em strin
+            //salvar em conc a string {"candidato":"matheus","n":8.5}
             localStorage.setItem("conc", JSON.stringify(conc))
         }
 
@@ -50,6 +59,7 @@
 <body>
 
     <h1 id="nome"></h1>
+    <!--oninput: td vez q modificar vai executar a funcao-->
     <input type="text" oninput="atualizar(this)">
 
     <scrip>
