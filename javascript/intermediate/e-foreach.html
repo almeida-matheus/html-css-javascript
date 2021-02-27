@@ -1,0 +1,30 @@
+<script>
+
+    function consoleItems(item, index, arr) {
+        console.log('a[' + index + '] = ' + item);
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+
+    numbers.forEach(consoleItems);
+    // a[0] = 1
+    // a[1] = 2
+    // a[2] = 3
+    // a[3] = 4
+    // a[4] = 5
+
+    //-----------------------------------
+    
+    const objList = [1, 2, 3, 4, 5];
+
+    objList.forEach((obj) => {
+        //{text: "test", completed: false}
+        console.log(obj);
+    });
+    // 1
+    // 2
+    // 3
+    // 4
+    // 5
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <h2>produtos</h2>
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+    <script>
+        'use strict' //evitar erro
+        const ul = document.getElementById('ul');
+        let lista = [
+            'chocolate',
+            'morango',
+            'pistache',
+            'laranja'
+        ]
+    
+        lista.forEach(function(item){
+            console.log(item)
+        })
+    
+        lista.forEach((item) => {
+            let li = document.createElement('li')
+            let button = document.createElement('button')
+            li.innerText = item;
+            ul.appendChild(li)
+            li.appendChild(button)
+            console.log(item)
+        })
+    
+    </script>
+    
+</body>
+</html>

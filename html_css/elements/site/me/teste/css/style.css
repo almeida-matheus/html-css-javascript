@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #212121 !important;
+    /*padding-top: 4rem;*/
+}
+
+hr {
+    height: 2px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
+
+.bg-black {
+    background-color: #212121 !important;
+}
+
+.text-grey {
+    color: #C0C0C0;
+}
+
+@media screen and (min-width: 992px) {
+    #main {
+        height: 89vh;
+    }
+}
+
+/*NAVBAR*/
+
+.navbar {
+    padding: 0;
+}
+
+.menu-geral {
+    margin: 0 auto;
+    background-color: #212121;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, .3)
+}
+
+/*logo*/
+
+.navbar-brand {
+    /*background-color: #63c6ae;*/
+    color: #e5e5e5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    transition: all 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #b7b7b7;
+}
+
+.navbar-toggler {
+    margin-top: 3.5px;
+}
+
+/*todos links*/
+
+.navbar-nav {
+    /*background-color: #242a2c;*/
+    text-align: center;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    border-bottom: 1px dotted rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+    font-size: .9rem;
+    transition: all .5s ease;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-link {
+        padding-top: 1.35rem;
+        padding-bottom: 1.35rem;
+        border-bottom: none;
+        margin-left: 0rem;
+        /*opcional se quiser distanciar os links do menu*/
+        /*se tivesse cor no background era só colocar background-color: transparent; em .navbar-nav*/
+    }
+    /*transição ao passar o mouse*/
+    .nav-link:hover {
+        color: #00a000;
+    }
+    .nav-link::after {
+        margin: auto;
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .4s;
+        background-color: #00a000;
+    }
+    .nav-link:hover::after {
+        width: 100%;
+        transition: width .4s;
+    }
+}
+
+/*// NAVBAR*/
+
+/*LOGO EFFECT*/
+
+.navbar-brand span {
+    display: inline-block;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 12px;
+    height: 17px;
+    line-height: 15px;
+    font-size: 20px;
+}
+
+@keyframes fa-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fa-blink {
+    -webkit-animation: fa-blink 1.0s linear infinite;
+    -moz-animation: fa-blink 1.0s linear infinite;
+    -ms-animation: fa-blink 1.0s linear infinite;
+    -o-animation: fa-blink 1.0s linear infinite;
+    animation: fa-blink 1.0s linear infinite;
+}
+
+/*// LOGO EFFECT*/
+
+.profile-photo {
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 6px solid #00a000;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+/*ICON FONTAWESOME*/
+
+#main a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#main .fab, #main .fas {
+    text-align: center;
+    margin: 5px;
+    /**/
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+    transition: all .3s;
+}
+
+.fa-linkedin-in {
+    /* background-color: #3b5999; */
+    background-color: #323232;
+}
+
+.fa-linkedin-in:hover {
+    color: #3b5999;
+}
+
+#main .fa-github {
+    background-color: #323232;
+}
+
+#main .fa-github:hover {
+    color: #323232;
+    background-color: #fff;
+}
+
+.fa-globe-americas {
+    /* background-color: #006600; */
+    background-color: #323232;
+}
+
+.fa-globe-americas:hover {
+    color: #006600;
+}
+
+.fa-telegram-plane {
+    /* background-color: #0088cc; */
+    background-color: #323232;
+}
+
+.fa-telegram-plane:hover {
+    color: #0088cc;
+}
+
+.fa-medium-m {
+    /* background-color: #80604d; */
+    background-color: #323232;
+}
+
+.fa-medium-m:hover {
+    color: #80604d;
+}
+
+.fa-youtube {
+    /* background-color: #c4302b; */
+    background-color: #323232;
+}
+
+.fa-youtube:hover {
+    color: #c4302b;
+}
+
+#main .fab:hover, #main .fas:hover {
+    background-color: #fff;
+}
+
+/*// ICON FONTAWESOME*/
+
+.text-section {
+    font-size: 3rem;
+}
+
+/*SOBRE MIM*/
+
+.typing {
+    color: #00a000;
+}
+
+#title-sobre-mim {
+    font-size: 1.5rem;
+}
+
+#text-sobre-mim {
+    border-left: solid 1px;
+    font-size: 1.25em;
+}
+
+.about a {
+    text-decoration: none;
+    color: #00a000;
+}
+
+.about a:hover {
+    text-decoration: none;
+    color: #006600;
+}
+
+/*//SOBRE MIM*/
+
+/*SKILLS*/
+
+.skill .card {
+    width: 18rem;
+    height: 15rem;
+    border-radius: 20px;
+    background-color: #323232;
+    transition: all 0.3s ease;
+}
+
+.skill .icon-skill {
+    font-size: 50px;
+    color: #00a000;
+    transition: all 0.3s ease;
+}
+
+.skill .title-skill {
+    font-size: 25px;
+    color: whitesmoke;
+    padding-top: 10px;
+}
+
+.skill .text-skill {
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.skill .card:hover {
+    background-color: #006600;
+    transform: scale(1.05);
+}
+
+.skill .card:hover .icon-skill {
+    color: whitesmoke;
+}
+
+/*// SKILLS*/
+
+/*SKILLS TEMP*/
+
+/*LG >*/
+
+@media screen and (min-width: 992px) {
+    #card-1 {
+        margin-left: auto;
+    }
+    #card-2 {
+        margin-right: auto;
+    }
+}
+
+/* LG <*/
+
+@media screen and (max-width: 992px) {
+    #card-1 {
+        margin: auto;
+    }
+    #card-2 {
+        margin: auto;
+    }
+}
+
+/*// SKILLS TEMP*/
+
+/*KNOW*/
+
+.title-know {
+    font-size: 1.5rem;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.skills__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    padding: .75rem 1rem;
+    margin-bottom: 18px;
+    border-radius: .5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+    background-color: #323232;
+    color: whitesmoke;
+}
+
+.skills_icon {
+    font-size: 2rem;
+    margin-right: 12px;
+    color: white;
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+}
+
+.skills__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #006600;
+    height: .25rem;
+    border-radius: .5rem;
+    /* z-index: var(--z-back); */
+    overflow: hidden;
+    margin-left: 2px;
+}
+
+.skills__html {
+    width: 98.5%;
+}
+
+/*// KNOW*/
+
+/* BUTTON GITHUB*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons .buttons-row {
+    display: block;
+    margin-left: 60px;
+}
+
+.buttons-row a {
+    text-decoration: none;
+}
+.buttons-row a:hover {
+    text-decoration: none;
+}
+
+.buttons .buttons-row button {
+    position: relative;
+    display: block;
+    height: 55px;
+    width: 150px;
+    margin: 0;
+    color: #222;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0s ease-out;
+}
+
+.buttons-row button:active {
+    top: 3px;
+}
+
+.buttons-row button.git, .buttons-row button.git span {
+    background: #b2b2b2;
+    border-left: 1px solid #999999;
+    box-shadow: 0px 5px 0px 0px #999999;
+}
+
+.buttons-row button.git:active {
+    box-shadow: 0px 2px 0px 0px #999999;
+}
+
+.buttons-row button span {
+    position: absolute;
+    height: 55px;
+    width: 60px;
+    top: 0;
+    left: -60px;
+    line-height: 55px;
+    font-size: 25px;
+    display: block;
+    font-weight: normal;
+    border-radius: 5px 0 0 5px;
+}
+
+.buttons-row button:active span {
+    top: -3px;
+}
+
+.buttons-row button.git span {
+    border-right: 2px solid #999999;
+}
+
+.buttons-row button.git:active span {
+    box-shadow: 0px 5px 0px 0px #999999, 6px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTON GITHUB*/
+
+/*diminuir a fonte das letras em telas nao lg*/
+
+@media screen and (max-width: 992px) {
+    .text-section {
+        font-size: 2rem;
+    }
+    .text-default {
+        font-size: 1.25rem;
+    }
+    .text-default-small {
+        font-size: 1rem;
+    }
+    #title-sobre-mim {
+        font-size: 1rem;
+    }
+    #text-sobre-mim {
+        border-left: none;
+        font-size: 1rem;
+    }
+}
+
+/*diminuir a fonte das letras do modal*/
+
+@media screen and (max-width: 576px) {
+    .title-modal {
+        font-size: 0.85rem;
+    }
+    /*1rem = 16px*/
+    .text-modal {
+        font-size: 0.75rem;
+    }
+    /*1rem = 16px*/
+    #text-sobre-mim {
+        text-align: justify;
+    }
+}
+
+/*diminuir o titulo das skills quando tiver na tela media*/
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .text-nowrap {
+        font-size: 1.0rem;
+    }
+}
+
+/*CONTACT*/
+
+#name {
+    color: whitesmoke;
+    background-color: #212121;
+}
+
+#email {
+    color: whitesmoke;
+    background-color: #212121;
+}
+
+#message {
+    color: whitesmoke;
+    background-color: #212121;
+}
+
+/*// CONTACT*/
+
+/*EFFECT HOVER IMG*/
+
+.efeito {
+    position: relative;
+    display: block;
+}
+
+.efeito p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: .35rem;
+    border: 4px solid rgba(255, 255, 255, .9);
+    padding: 10px;
+    opacity: 1.0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+/*quando passar o mouse em cima da tag a*/
+
+.efeito a:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.efeito img {
+    border: #191919 solid;
+    /*esta linha aplica uma borda cor preta na imagem*/
+    opacity: 1.0;
+    /*esta linha é a que escurece a imagem*/
+    transition: opacity .4s, visibility .4s;
+}
+
+.efeito img:hover {
+    border: #191919 solid;
+    /*esta linha aplica uma borda cor preta na imagem*/
+    opacity: 0.2;
+    /*esta linha é a que clareia a imagem*/
+}
+
+/*// HOVER IMG*/
+
+/*ANIMATION CONTACT*/
+
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+}
+
+#status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/*// ANIMATION CONTACT*/
+
+/*ANIMATION*/
+.animate__animated {
+    animation-delay: 2s;
+}
+/*// ANIMATION*/

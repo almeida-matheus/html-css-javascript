@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arvo', serif;
+}
+
+/*HEADER*/
+.card-header {
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-header p{
+    padding: 0;
+    margin: 0;
+}
+.card-header #switch {
+    opacity: 0;
+}
+.card-header label{
+    /* margin-right: auto; */
+    cursor: pointer;
+}
+/*// HEADER*/
+
+
+/*BUTTON*/
+.list button{
+    /* pointer-events: none; */
+    border: none;
+    background-color: transparent;
+}
+.list button i{
+    border-radius: 50%;
+    transition: all 0.15s ease;
+}
+.list button i:hover{
+    color: red;
+    background-color: grey;
+}
+/*// BUTTON*/
+
+/*CLICK BUTTON*/
+.list button i:active,
+.list button i:focus{
+    color: red;
+    background-color: grey;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*!= li.completed li .completed*/
+.list li.completed {
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+/*// CLICK BUTTON*/
+
+/*LIST*/
+.list {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /* border: black 1px solid; */
+}
+
+.list li {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    /* display: flex;
+    align-items: center; */
+    /*d-flex flex-row*/
+}
+/*// LIST*/
